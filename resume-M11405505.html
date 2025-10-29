@@ -83,6 +83,14 @@
             text-align: center;
             margin-top: 32px;
         }
+
+        pre
+        {
+            text-align: left;
+            white-space: pre-line;
+            margin-left: 0;
+        }
+
     </style>
 </head>
 
@@ -160,12 +168,10 @@
 
                 <li>
                     若想跟前幾個版本做對比，可以輸入：
-                    與前一個版本對比
                     <pre>
                         git show -1 #與前一個版本對比
                     </pre>
-
-                    與前兩個版本對比 
+                    或者： 
                     <pre>
                         git show -2 #與前兩個版本對比
                     </pre>
@@ -181,7 +187,7 @@
                     </pre>
 
                     找到想恢復的版本編號（例如：3ee10825adc2cf23a35e27fbe3ca3a9473636a83）
-                    然後輸入：
+                    <br>然後輸入：
                     <pre>
                         git restore --source 3ee10825adc2cf23a35e27fbe3ca3a9473636a83 resume-M11405505.html
                     </pre>
