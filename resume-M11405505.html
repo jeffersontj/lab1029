@@ -142,6 +142,51 @@
         </table>
     </section>
 
+        <!-- Lab 說明 / 自己怎麼更新這個網頁 -->
+    <section>
+        <h2>How I Update This Page / 我如何更新這個頁面</h2>
+
+        <div class="update-steps">
+            <p>
+                這份履歷檔案叫做 <code>resume-M11405505.html</code> 。<br>
+                如果我要修改內容（例如 Skills、Education、聯絡方式），流程是：
+            </p>
+
+            <ol>
+                <li>
+                    在本機電腦打開專案資料夾（例如 <code>lab1029</code>），用編輯器修改
+                    <code>resume-M11405505.html</code>，必要時也更新首頁 <code>index.html</code>
+                    裡的清單。
+                </li>
+
+                <li>
+                    儲存檔案後，回到我的分支（例如 <code>feature/M11405505</code>）在終端機下指令：
+                    <pre>
+                        git status
+                        git add resume-M11405505.html index.html
+                        git commit -m "chore(resume): update resume content for M11405505"
+                    </pre>
+                </li>
+
+                <li>
+                    把更新推回 GitHub 遠端：
+                    <pre>
+                        git push origin feature/M11405505
+                    </pre>
+                </li>
+
+                <li>
+                    到 GitHub 建立或更新 Pull Request，請組長 / reviewer 把
+                    <code>feature/M11405505</code> 合併到 <code>main</code>。
+                </li>
+            </ol>
+
+            <p>
+                簡單講：改 HTML → <code>git add</code> → <code>git commit</code> → <code>git push</code> → 開 PR 合併。
+            </p>
+        </div>
+    </section>
+
     <div class="note">
         This page is part of the lab1029 collaborative Git exercise.<br>
         Branch: feature/M11405505
