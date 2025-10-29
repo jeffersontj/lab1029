@@ -1,118 +1,151 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>My Basic Resume</title>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M11405505 - 王紹帆 Frank - Resume</title>
 
-        <style>
-            body 
-            {
-                font-family: Arial, sans-serif;
-                max-width: 800px; /* Limits the resume width */
-                margin: 0 auto; /* Centers the resume on the page */
-                padding: 20px;
-            }
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;           /* 頁面最大寬度 */
+            margin: 0 auto;             /* 置中 */
+            padding: 20px;
+            line-height: 1.6;
+        }
 
-            h1 { color: #333366; /* A dark blue color */ }
+        h1 {
+            color: #333366;             /* 深藍色 */
+            margin: 0 0 8px 0;
+        }
 
-            h2 
-            {
-                color: #444;
-                border-bottom: 2px solid #ccc; /* A grey line for separation */
-                padding-bottom: 5px;
-                margin-top: 20px; 
-            }
+        h2 {
+            color: #444;
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 5px;
+            margin-top: 24px;
+            margin-bottom: 8px;
+            font-size: 20px;
+        }
 
-            table 
-            {
-                width: 100%;
-                border-collapse: collapse; /* Removes double borders */
-            }
+        header {
+            text-align: center;
+            margin-bottom: 24px;
+        }
 
-            th, td 
-            {
-            border: 1px solid #ddd; /* Light grey border */
+        .contact-line {
+            font-size: 14px;
+            color: #444;
+            margin-bottom: 12px;
+        }
+
+        img {
+            display: block;             /* 讓 margin: auto 生效 */
+            margin: 0 auto;
+            border-radius: 5px;
+            border: 1px solid #999;
+        }
+
+        ul {
+            list-style-type: square;    /* 方形項目符號 */
+            margin-left: 20px;
+        }
+
+        ul li {
+            margin-bottom: 4px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;  /* 合併邊框 */
+            font-size: 14px;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;     /* 淺灰邊框 */
             padding: 8px;
             text-align: left;
-            } 
+        }
 
-            ul
-            {
-                list-style-type: square; /* Changes the bullet point shape */
-                margin-left: 20px;
-            } 
+        thead th {
+            background-color: #f2f2f2;
+        }
 
-            img 
-            {
-                display: block; /* Allows margin: auto to work */
-                margin: auto;
-                border-radius: 5px;
-            } 
+        .student-id {
+            font-size: 13px;
+            color: #666;
+        }
 
+        .note {
+            font-size: 12px;
+            color: #888;
+            text-align: center;
+            margin-top: 32px;
+        }
+    </style>
+</head>
 
+<body>
 
-
-        </style>
-
-
-    
-    </head>
-
+    <!-- 個人資料區 -->
     <header>
         <h1>王紹帆 Frank</h1>
-        <p>frank008013@gmail.com | 0928-186-207</p>
-        <img src="p-M11405505.jpg" alt="王紹帆 Frank Profile Photo" width="100">
-    </header> 
+        <div class="student-id">學號：M11405505</div>
+        <div class="contact-line">
+            frank008013@gmail.com | 0928-186-207
+        </div>
 
+        <!-- 這張照片的檔名要放在同一個資料夾：p-M11405505.jpg -->
+        <img src="p-M11405505.jpg" alt="王紹帆 Frank Profile Photo" width="120">
+    </header>
 
+    <!-- Skills -->
+    <section>
+        <h2>Skills</h2>
+        <ul>
+            <li>HTML5 &amp; CSS3：能建立基本頁面與排版</li>
+            <li>Git / GitHub：branch workflow、commit、push、pull request</li>
+            <li>Basic JavaScript：修改網頁內容、互動邏輯的基礎操作</li>
+            <li>Team Collaboration：多人協作、版本整合、解決 merge conflict</li>
+        </ul>
+    </section>
 
-    <h2>Skills</h2>
+    <!-- Education -->
+    <section>
+        <h2>Education</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Degree / Certificate</th>
+                    <th>Institution</th>
+                    <th>Year(s)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>碩士</td>
+                    <td>國立臺灣科技大學</td>
+                    <td>2025 ~ 毫無光明的未來</td>
+                </tr>
+                <tr>
+                    <td>大學</td>
+                    <td>國立臺灣科技大學</td>
+                    <td>2021 ~ 2025</td>
+                </tr>
+                <tr>
+                    <td>高中 / 職</td>
+                    <td>市立臺中工業高級中等學校</td>
+                    <td>2018 ~ 2021</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
 
-    <ul>
-        <li>HTML5 & CSS3</li>
-        <li>[Your Skill 2]</li>
-        <li>[Your Skill 3]</li>
-        <li>[Your Skill 4]</li>
-    </ul> 
+    <div class="note">
+        This page is part of the lab1029 collaborative Git exercise.<br>
+        Branch: feature/M11405505
+    </div>
 
-    <h2>Education</h2>
-
-    <table>
-        <thead>
-            <tr>
-                <th>Degree/Certificate</th>
-                <th>Institution</th>
-                <th>Year</th>
-            </tr>
-        </thead>
-        <tbody>
-
-            <tr>
-                <td>碩士</td>
-                <td>國立臺灣科技大學</td>
-                <td>2025~毫無光明的未來</td>
-            </tr>
-
-            <tr>
-                <td>大學</td>
-                <td>國立臺灣科技大學</td>
-                <td>2021~2025</td>
-            </tr>
-
-            <tr>
-                <td>高中/職</td>
-                <td>市立臺中工業高級中等學校</td>
-                <td>2018~2021</td>
-            </tr>
-        </tbody>
-    </table> 
-
-    
-
-
-
-    
-<body>
 </body>
 </html>
