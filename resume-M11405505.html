@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M11405505 - 王紹帆 Frank - Resume</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;           /* 頁面最大寬度 */
+            margin: 0 auto;             /* 置中 */
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        h1 {
+            color: #333366;             /* 深藍色 */
+            margin: 0 0 8px 0;
+        }
+
+        h2 {
+            color: #444;
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 5px;
+            margin-top: 24px;
+            margin-bottom: 8px;
+            font-size: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 24px;
+        }
+
+        .contact-line {
+            font-size: 14px;
+            color: #444;
+            margin-bottom: 12px;
+        }
+
+        img {
+            display: block;             /* 讓 margin: auto 生效 */
+            margin: 0 auto;
+            border-radius: 5px;
+            border: 1px solid #999;
+        }
+
+        ul {
+            list-style-type: square;    /* 方形項目符號 */
+            margin-left: 20px;
+        }
+
+        ul li {
+            margin-bottom: 4px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;  /* 合併邊框 */
+            font-size: 14px;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;     /* 淺灰邊框 */
+            padding: 8px;
+            text-align: left;
+        }
+
+        thead th {
+            background-color: #f2f2f2;
+        }
+
+        .student-id {
+            font-size: 13px;
+            color: #666;
+        }
+
+        .note {
+            font-size: 12px;
+            color: #888;
+            text-align: center;
+            margin-top: 32px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 個人資料區 -->
+    <header>
+        <h1>王紹帆 Frank</h1>
+        <div class="student-id">學號：M11405505</div>
+        <div class="contact-line">
+            frank008013@gmail.com | 0928-186-207
+        </div>
+
+        <!-- 這張照片的檔名要放在同一個資料夾：p-M11405505.jpg -->
+        <img src="p-M11405505.jpg" alt="王紹帆 Frank Profile Photo" width="120">
+    </header>
+
+    <!-- Skills -->
+    <section>
+        <h2>Skills</h2>
+        <ul>
+            <li>HTML5 &amp; CSS3：能建立基本頁面與排版</li>
+            <li>Git / GitHub：branch workflow、commit、push、pull request</li>
+            <li>Basic JavaScript：修改網頁內容、互動邏輯的基礎操作</li>
+            <li>Team Collaboration：多人協作、版本整合、解決 merge conflict</li>
+        </ul>
+    </section>
+
+    <!-- Education -->
+    <section>
+        <h2>Education</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Degree / Certificate</th>
+                    <th>Institution</th>
+                    <th>Year(s)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>碩士</td>
+                    <td>國立臺灣科技大學</td>
+                    <td>2025 ~ 毫無光明的未來</td>
+                </tr>
+                <tr>
+                    <td>大學</td>
+                    <td>國立臺灣科技大學</td>
+                    <td>2021 ~ 2025</td>
+                </tr>
+                <tr>
+                    <td>高中 / 職</td>
+                    <td>市立臺中工業高級中等學校</td>
+                    <td>2018 ~ 2021</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+        <!-- Lab 說明 / 自己怎麼更新這個網頁 -->
+    <section>
+        <h2>How I Update This Page / 我如何更新這個頁面</h2>
+
+        <div class="update-steps">
+
+            <ol>
+                <li>
+                    儲存檔案後，回到PowerShell 或 Terminal，確認目前在
+                    <code>D:\work\lab1029</code> 分支：
+                    <pre>
+                        git commit -a -m "My 3rd commit."
+                    </pre>
+                    版本名稱可隨意輸入。
+                </li>
+
+                <li>
+                    若想跟前幾個版本做對比，可以輸入：
+                    與前一個版本對比
+                    <pre>
+                        git show -1 #與前一個版本對比
+                    </pre>
+
+                    與前兩個版本對比 
+                    <pre>
+                        git show -2 #與前兩個版本對比
+                    </pre>
+
+                    若想退出對比畫面，請按[:q]。
+                    (VI編輯器指令)
+                </li>
+
+                <li>
+                    若恢復至前幾個版本，可以先輸入：
+                    <pre>
+                        git log --pretty=oneline
+                    </pre>
+
+                    找到想恢復的版本編號（例如：3ee10825adc2cf23a35e27fbe3ca3a9473636a83）
+                    然後輸入：
+                    <pre>
+                        git restore --source 3ee10825adc2cf23a35e27fbe3ca3a9473636a83 resume-M11405505.html
+                    </pre>
+                </li>
+
+
+
+                <li>
+                    把更新推回 GitHub 遠端：
+                    <pre>
+                        git push origin feature/M11405505
+                    </pre>
+                </li>
+
+                <li>
+                    到 GitHub 建立或更新 Pull Request，請組長 / reviewer 把
+                    <code>feature/M11405505</code> 合併到 <code>main</code>。
+                </li>
+            </ol>
+
+            <p>
+                簡單講：改 HTML → <code>git add</code> → <code>git commit</code> → <code>git push</code> → 開 PR 合併。
+            </p>
+        </div>
+    </section>
+
+    <div class="note">
+        This page is part of the lab1029 collaborative Git exercise.<br>
+        Branch: feature/M11405505
+    </div>
+
+</body>
+</html>
