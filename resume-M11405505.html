@@ -147,26 +147,47 @@
         <h2>How I Update This Page / 我如何更新這個頁面</h2>
 
         <div class="update-steps">
-            <p>
-                這份履歷檔案叫做 <code>resume-M11405505.html</code> 。<br>
-                如果我要修改內容（例如 Skills、Education、聯絡方式），流程是：
-            </p>
 
             <ol>
                 <li>
-                    在本機電腦打開專案資料夾（例如 <code>lab1029</code>），用編輯器修改
-                    <code>resume-M11405505.html</code>，必要時也更新首頁 <code>index.html</code>
-                    裡的清單。
+                    儲存檔案後，回到PowerShell 或 Terminal，確認目前在
+                    <code>D:\work\lab1029</code> 分支：
+                    <pre>
+                        git commit -a -m "My 3rd commit."
+                    </pre>
+                    版本名稱可隨意輸入。
                 </li>
 
                 <li>
-                    儲存檔案後，回到我的分支（例如 <code>feature/M11405505</code>）在終端機下指令：
+                    若想跟前幾個版本做對比，可以輸入：
+                    與前一個版本對比
                     <pre>
-                        git status
-                        git add resume-M11405505.html index.html
-                        git commit -m "chore(resume): update resume content for M11405505"
+                        git show -1 #與前一個版本對比
+                    </pre>
+
+                    與前兩個版本對比 
+                    <pre>
+                        git show -2 #與前兩個版本對比
+                    </pre>
+
+                    若想退出對比畫面，請按[:q]。
+                    (VI編輯器指令)
+                </li>
+
+                <li>
+                    若恢復至前幾個版本，可以先輸入：
+                    <pre>
+                        git log --pretty=oneline
+                    </pre>
+
+                    找到想恢復的版本編號（例如：3ee10825adc2cf23a35e27fbe3ca3a9473636a83）
+                    然後輸入：
+                    <pre>
+                        git restore --source 3ee10825adc2cf23a35e27fbe3ca3a9473636a83 resume-M11405505.html
                     </pre>
                 </li>
+
+
 
                 <li>
                     把更新推回 GitHub 遠端：
